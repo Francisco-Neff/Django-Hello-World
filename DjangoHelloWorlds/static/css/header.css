@@ -1,0 +1,9 @@
+header{
+    background-color:rgb(18, 56, 18);
+    background: linear-gradient(to bottom right, rgb(18, 56, 18), rgb(149, 187, 149) );
+    color:whitesmoke;
+    font-size:larger;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 3%;
+}
