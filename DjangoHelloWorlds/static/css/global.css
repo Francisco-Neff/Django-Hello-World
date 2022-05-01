@@ -1,0 +1,13 @@
+div.code {
+    background-color: azure;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+span.code{
+    font-family: "Lucida Console",monospace;
+    font-size: medium;
+}
