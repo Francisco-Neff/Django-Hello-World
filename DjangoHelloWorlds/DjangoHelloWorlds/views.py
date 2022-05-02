@@ -4,7 +4,7 @@ from django.shortcuts import render
 from pathlib import Path
 
 def homepage(request):
-    #Pagina de inicio
+    #Página de inicio
     return render(request, 'index.html')
 
 def holamundo(request):
@@ -12,8 +12,8 @@ def holamundo(request):
     return render(request, 'holamundo.html')
 
 def primerospasos(request):
-    #Se indica como se crea el directorio de templates y archivos estaticos e incluir una página de inicio.
+    #Se indica como se crea el directorio de templates y archivos estáticos e incluir una página de inicio.
     return render(request, 'primerospasos.html')
 
 def plantillas(request):
-    return render(request, 'index.html')
+    return render(request, 'plantillas.html')

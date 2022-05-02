@@ -2,9 +2,59 @@
 
 {%block title%} Primeros Pasos {%endblock%}
 {%block content%} 
+<h2>Directorios de recursos</h2>
 
+<p>Crear un directorio de plantillas o recursos estáticos nos sirve para tener todos nuestros archivos de cualquier tipo localizados, para ello crearemos los nuevos directorios "template" y "static" como se muestra a continuación</p>
+<div class="code"> 
+    <pre>
+        <code>
+            Nombre_Proyecto
+            ├── Nombre_Proyecto
+            ├── db.sqlite3
+            ├── templates
+            |   └── recursos
+            ├── static
+            |   └── recursos
+            └── manage.py
+        </code>
+    </pre>
+</div>
+<p>En "template" guardaremos todos los "html", mientras que en "static" almacenaremos otro tipos de archivos. Ademas de esto hay que modificar el fichero "settings.py" para vincular los nuevos directorios y el fichero "urls.py" para añadir la vinculación de ficheros estáticos</p>
+<div class="code"> 
+    <pre>
+        <span class="code">- Añadir ruta de template en "settings.py"</span>
+        <code>
+    STATIC_TEMPLATE = BASE_DIR / 'templates'
+    TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [STATIC_TEMPLATE],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+        ],},},]
+        </code>
+    </pre>
+</div>
+
+<div class="code"> 
+    <pre>
+        <span class="code">- Añadir ruta de static en "settings.py"</span>
+        <code>
+    STATICFILES_DIRS = [
+    BASE_DIR / "static"]
+    </code>
+        <span class="code">- Añadir ruta de static en "urls.py"</span>
+        <code>
+    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    </code>
+</pre>
+</div>
 <p>
-    Como web de referencia podemos usar la misma documentación que realiza el sitio web <a href="https://docs.djangoproject.com/en/4.0/howto/static-files/">Django</a>
+    Como web de referencia podemos usar la misma documentación que realiza el sitio web <a href="https://docs.djangoproject.com/">Django</a>
 </p>
 
 {%endblock%}

@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.homepage ,name='inicio' ),
     path('holamundo', views.holamundo ,name='holamundo' ),
     path('primerospasos', views.primerospasos ,name='primerospasos' ),
+    path('plantillas', views.plantillas ,name='plantillas' ),
 
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

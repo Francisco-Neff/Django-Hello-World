@@ -1,0 +1,26 @@
+{%extends "plantilla_base.html"%}
+
+{%block title%} Plantillas {%endblock%}
+
+{%block content%} 
+
+<h2>Definición de plantillas</h2>
+<p>El definir plantillas es muy importante ya que nos ahorra tiempo y la vez solo tenemos que definir los recursos una vez. Por ejemplo, solo tenemos que definir la cabecera, panel de la navegación y el pie una vez extiendo estos a las demás páginas html</p>
+<div class="code"> 
+    <pre>
+        <span class="code">- Definición de una plantilla</span> <p>Definir una plantilla es crear un html de base que queramos usar en todas nuestras páginas con la particularidad de definir los bloques que vayan a sufrir modificaciones</p>       
+        <code>
+        block nombre_del_bloque  -  endblock 
+        </code>
+    </pre>
+</div>
+<div class="code"> 
+    <pre>
+        <span class="code">- Uso de una plantilla</span> <p>Para usar una plantilla solo tendremos que hacer la extensión de esta, ademas de introducir la información especifica de esta página a través de los bloques de edicción</p> 
+        <code>
+        extends "nombre_plantilla.html" 
+        </code>
+    </pre>
+</div>
+<p>Nota: se debe incluir "{%" entre cada etiqueta de bloque</p>
+{%endblock%}
