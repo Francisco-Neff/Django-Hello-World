@@ -1,0 +1,40 @@
+{%extends "plantilla_base.html"%}
+
+{%block title%} App {%endblock%}
+{%block content%} 
+<h2>Creación de un nuevo servicio en un proyecto en Django</h2>
+<p>Crear un nuevo servicio en nuestro proyecto nos facilita la posibilidad de tener un proyecto modular y escalable en el tiempo.
+    Para crear un nuevo servicio tan solo deberemos ejecutar el siguiente comando situados en el directorio de nuestro proyecto.
+</p>
+<div class="code"> 
+    <pre>
+        <span class="code">python manage.py startapp Nombre_APP</span>
+    </pre>
+</div>
+<p>Al realizar esto se crear un nuevo directorio con el siguiente contenido</p>
+<div class="code"> 
+    <pre>
+        <code>
+            Nombre_APP
+            ├── migrations
+            ├── admin.py
+            ├── apps.py
+            ├── models.py
+            ├── tests.py
+            └── views.py
+            </code>
+    </pre>
+</div>
+<p>Aparte de esto hay que añadir la nueva APP creada en "settings.py"</p>
+<div class="code"> 
+    <pre>
+        <code><span class="code">
+    INSTALLED_APPS = [
+    app_predefinidas_Django,
+    Nombre_APP,
+    ]
+        </span></code>
+    </pre>
+</div>
+
+{%endblock%}
