@@ -11,8 +11,8 @@ En este repositorio se ira publicando como generar pruebas básicas en Django.
 - [Plantillas](#plantillas)
 - [App](#app)
 - [World1](#world1)
-*   [Models](#models)
-*   [Form](#form)
+  -   [Models](#models)
+  -   [Form](#form)
 
 
 
