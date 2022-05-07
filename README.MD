@@ -13,6 +13,7 @@ En este repositorio se ira publicando como generar pruebas básicas en Django.
 - [World1](#world1)
   -   [Models](#models)
   -   [Form](#form)
+  -   [Form-Model](#form-model)
 
 
 
@@ -36,3 +37,6 @@ Se define models.py y un ejemplo de uso.
 
 ### Form
 Se define forms.py y un ejemplo de uso.
+
+### Form-Model
+Se define un formulario con información de Models.

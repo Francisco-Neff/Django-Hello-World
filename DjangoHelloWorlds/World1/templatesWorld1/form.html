@@ -1,0 +1,48 @@
+{%extends "plantilla_base_world1.html"%}
+
+{%block title%} Model {%endblock%}
+{%block content%} 
+<h2>Creación de Formularios</h2>
+<p>
+Podemos crear formularios a través de "forms.py" ayudándonos de esto podemos crear de una manera muy sencilla nuestros formularios y comprobar que sean validos.
+</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Formulario en forms.py</span>  
+        <code>
+        class FormularioWorld1Simple(forms.Form):
+            campo1 = forms.CharField(label='campo1', max_length=100)
+        </code>
+    </pre>
+</div>
+
+<p>
+Una vez creado el formulario podemos validar la respuesta que recibimos por el usuario y el crearlo de una manera muy sencilla al crear la vista.    
+</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Ingreso de formulario en la vista</span>  
+        <code>
+            form = Formulario()
+            return render(request, 'form.html',{'form':form})
+        </code>
+    <span class="code">- Validación del formulario en POST</span>  
+    <code>
+        if request.method == 'POST':
+            form = Formulario(request.POST)    
+            if form.is_valid():
+    </code>
+    </pre>
+</div>
+
+<h4>Ejemplo de un formulario</h4>
+<form  method="post">
+{% csrf_token %}
+{{form}}
+<input type="submit" value="Submit">
+</form>
+<p>{{respuesta}}</p>
+<p>
+    Podemos obtener mas información a traves de la <a href="https://docs.djangoproject.com/en/4.0/topics/forms/">documentación oficial.</a>    
+</p>
+{%endblock%}

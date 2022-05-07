@@ -34,6 +34,7 @@ urlpatterns = [
     
     path('world1',  world1.homepage_world1   ,name='world1' ),
     path('model', world1.model ,name='model' ),
+    path('formsimple', world1.formsimple ,name='formulario_simple' ),
 
 
     path('admin/', admin.site.urls)
