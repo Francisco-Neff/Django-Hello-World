@@ -11,3 +11,8 @@ span.code{
     font-family: "Lucida Console",monospace;
     font-size: medium;
 }
+
+code.cmd {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+}

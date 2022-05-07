@@ -21,6 +21,3 @@ def app_servicios(request):
     #Se indica como crear una nueva app.
     return render(request, 'app_servicios.html')
 
-def clase_model(request):
-    #Se indica como usar models y los forms de Django.
-    return render(request, 'modelform.html')

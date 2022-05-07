@@ -53,11 +53,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'DjangoHelloWorlds.urls'
 
 STATIC_TEMPLATE = BASE_DIR / 'templates'
+STATIC_TEMPLATE_WORLD1 = BASE_DIR / 'World1/templatesWorld1'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [STATIC_TEMPLATE],
+        'DIRS': [STATIC_TEMPLATE,STATIC_TEMPLATE_WORLD1],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+
 from . import views
+from World1 import views as world1
 
 urlpatterns = [
     
@@ -26,6 +28,13 @@ urlpatterns = [
     path('primerospasos', views.primerospasos ,name='primerospasos' ),
     path('plantillas', views.plantillas ,name='plantillas' ),
     path('app', views.app_servicios ,name='app' ),
+    
+    
+    #World1
+    
+    path('world1',  world1.homepage_world1   ,name='world1' ),
+    path('model', world1.model ,name='model' ),
+
 
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

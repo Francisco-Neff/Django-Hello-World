@@ -9,16 +9,15 @@
     <title> {%block title%} {%endblock%} </title>
 </head>
 <body>
-<header id="header"> <h1>Django Hello Worlds</h1></header>
+<header id="header"> 
+    <h1>Django Hello Worlds</h1>
+    <h3>World1</h3>
+
+</header>
 <nav id="nav"> 
 <a href="{% url 'inicio' %}">Inicio</a>
-<a href="{% url 'holamundo' %}">Hola Mundo</a>
-<a href="{% url 'primerospasos' %}">Primeros Pasos</a>
-<a href="{% url 'plantillas' %}">Plantillas</a>
-<a href="{% url 'app' %}">Apps</a>
 <a href="{% url 'world1' %}">World1</a>
-
-
+<a href="{% url 'model' %}">Model</a>
 </nav>
 <div id="content">{%block content%} {%endblock%}</div>
 <footer id="footer">
