@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navegacion.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <title> {%block title%} {%endblock%} </title>
@@ -15,10 +16,17 @@
 
 </header>
 <nav id="nav"> 
-<a href="{% url 'inicio' %}">Inicio</a>
-<a href="{% url 'world1' %}">World1</a>
-<a href="{% url 'model' %}">Model</a>
-<a href="{% url 'formulario_simple' %}">Formulario</a>
+    <ul>
+        <li><a href="">Inicio</a>
+            <ul>
+            <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'world1' %}">World1</a></li>
+            </ul>
+        </li>
+
+    <li><a href="{% url 'model' %}">Model</a></li>
+    <li><a href="{% url 'formulario_simple' %}">Formulario</a></li>
+    </ul>
 </nav>
 <div id="content">{%block content%} {%endblock%}</div>
 <footer id="footer">
