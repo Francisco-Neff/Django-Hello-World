@@ -16,6 +16,7 @@ En este repositorio se ira publicando como generar pruebas básicas en Django.
   -   [Form-Model](#form-model)
   -   [Datos en model](#datos-model)
 - [World2](#world2)
+  - [Vista-Simple](#vista-simple)
 - [World3](#world3)
 - [World4](#world4)
 
