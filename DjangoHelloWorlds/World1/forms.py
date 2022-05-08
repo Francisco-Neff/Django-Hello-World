@@ -1,4 +1,6 @@
+from dataclasses import fields
 from django import forms
+from World1.models import Modelo1
 
 #Crear Formularios
 
@@ -8,3 +10,7 @@ class FormularioWorld1Simple(forms.Form):
 
 
 #Formulario basado en Model
+class FormularioModel(forms.ModelForm):
+    class Meta:
+        model = Modelo1
+        fields = ['campo1','campo2']

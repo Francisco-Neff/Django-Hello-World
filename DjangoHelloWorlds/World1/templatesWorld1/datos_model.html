@@ -1,0 +1,42 @@
+{%extends "plantilla_base_world1.html"%}
+
+{%block title%} Datos {%endblock%}
+{%block content%} 
+
+<h2>Definición de modelos</h2>
+<p>
+A través de "models.py" creado con la aplicación, donde podemos ver un ejemplo <a href="{% url 'app' %}">aquí</a> y el formulario que hace uso de este, <a href="{% url 'app' %}">aquí</a> podemos almacenar y hacer uso de los datos del modelo.
+</p>
+
+<div class="code"> 
+    <pre>
+    <span class="code">- Guardar datos en el modelo.</span>  <p>Recogido el formulario guardaremos los datos de este en el modelo con el siguiente trozo de código.</p>
+        <code>
+            modelo = Modelo1(campo1=form.cleaned_data.get('campo1'),campo2=form.cleaned_data.get('campo2'))
+            modelo.save()
+        </code>
+    </pre>
+</div>
+
+
+<div class="code"> 
+    <pre>
+    <span class="code">- Mostrar datos en el modelo.</span>  <p>Para buscar los datos del ultimo registro guardado haremos uso del QuerySet con object.</p>
+        <code>
+            Modelo1.objects.all() #Obtenemos todos los registros.
+            Modelo1.objects.last() #Obtenemos el registro especifico.
+            getattr(modelo,'campo1') #Obtiene el dato de un campo del registro leído.
+        </code>
+    </pre>
+</div>
+
+<h4>Ejemplo de un formulario</h4>
+<form  method="post">
+{% csrf_token %}
+{{form}}
+<input type="submit" value="Submit">
+</form>
+<p>{{respuesta}}</p>
+
+<p>Podemos tener mas información a través de la <a href="https://docs.djangoproject.com/en/4.0/ref/models/querysets/">documentación oficial</a></p>
+{%endblock%}

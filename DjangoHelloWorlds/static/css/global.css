@@ -16,3 +16,7 @@ code.cmd {
     font-family: "Courier New", Courier, monospace;
     font-size: 1em;
 }
+
+input {
+    display:  inline-block;
+}
