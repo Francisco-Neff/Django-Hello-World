@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 from . import views
 from World1 import views as world1
+from World2 import views as world2
 
 urlpatterns = [
     
@@ -35,9 +36,12 @@ urlpatterns = [
     path('world1',  world1.homepage_world1   ,name='world1' ),
     path('model', world1.model ,name='model' ),
     path('formsimple', world1.forms_simple  ,name='formulario_simple' ),
-    path('formsmodel', world1.forms_mmodel ,name='formulario_model' ),
+    path('formsmodel', world1.forms_model ,name='formulario_model' ),
     path('datosmodel', world1.datos_model ,name='datosmodel' ),
 
+    #World2
+    path('world2',  world2.homepage_world2   ,name='world2' ),
+    path('param/<str:param>',  world2.parametros_url  , name='param'  ),
 
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

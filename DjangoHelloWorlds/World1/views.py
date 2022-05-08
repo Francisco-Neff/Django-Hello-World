@@ -30,7 +30,7 @@ def forms_simple(request):
     return render(request, 'form.html',context)
 
 
-def forms_mmodel(request):
+def forms_model(request):
     #Definición de un formulario a través de Model.
     if request.method == 'POST':
         form = FormularioModel(request.POST)

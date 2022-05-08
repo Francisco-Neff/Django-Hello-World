@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'World1'
+    'World1',
+    'World2'
 ]
 
 MIDDLEWARE = [
@@ -54,11 +55,12 @@ ROOT_URLCONF = 'DjangoHelloWorlds.urls'
 
 STATIC_TEMPLATE = BASE_DIR / 'templates'
 STATIC_TEMPLATE_WORLD1 = BASE_DIR / 'World1/templatesWorld1'
+STATIC_TEMPLATE_WORLD2 = BASE_DIR / 'World2/templatesWorld2'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [STATIC_TEMPLATE,STATIC_TEMPLATE_WORLD1],
+        'DIRS': [STATIC_TEMPLATE,STATIC_TEMPLATE_WORLD1,STATIC_TEMPLATE_WORLD2],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
