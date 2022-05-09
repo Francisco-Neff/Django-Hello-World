@@ -2,7 +2,32 @@
 
 {%block title%} URL {%endblock%}
 {%block content%} 
-
+<h2>Parámetros por URL</h2>
+<p>Al enviar un parámetro por URL, podemos acceder a un recurso en concreto de nuestro proyecto que comportan la misma URL o acceso.</p>
+<p>Ejemplo de uso:</p>
+<pre>
 <p>El valor del final de la URL coincide con esta cadena de texto: {{parametro}}</p>
+</pre>
+
+<p>Para hacer uso de esto deberemos introducir el parámetro por URL en "urls.py"</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Parámetro en URL</span>  
+        <code>
+            path('param/<str:param>',  world2.parametros_url  , name='param' ),
+        </code>    
+    </pre>
+</div>
+
+<p>Para recoger el valor enviado por parámetro los recogeremos en la definición del método en "views.py"</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Parámetro en método</span>  
+        <code>
+            def parametros_url(request,param):
+        </code>    
+    </pre>
+</div>
+
 
 {%endblock%}

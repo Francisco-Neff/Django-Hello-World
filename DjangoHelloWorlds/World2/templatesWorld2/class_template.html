@@ -1,0 +1,41 @@
+{%extends "plantilla_base_world2.html"%}
+
+{%block title%} Class {%endblock%}
+
+{%block content%} 
+
+<h2>Vista basada en clase con parámetros por URL</h2>
+<p>Creando una vista basada en clases podemos analizar rápidamente las respuestas HTTP como GET, POST u otros.</p>
+<p>Aquí podemos ver un ejemplo:</p>
+<pre>
+    <p>{{respuesta}}</p>
+    <form method="post" action="{% url 'class' 'POST' %}">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+    </form>
+</pre>
+<p>Para crear una vista basada en clases hay varias maneras de crearlas, pero aquí definiremos una muy simple.</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Vista en "views.py"</span>  
+        <code>
+            class param_Template(View):
+                def get():
+                def post():
+        </code>    
+    </pre>
+</div> 
+
+<p>Crear la llamada en "urls.py".</p>
+<div class="code"> 
+    <pre>
+    <span class="code">- Vista en "views.py"</span>  
+        <code>
+            path('class/<str:param>',  world2.param_Template.as_view()  , name='class' ),
+        </code>    
+    </pre>
+</div> 
+
+
+{%endblock%}

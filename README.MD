@@ -17,6 +17,7 @@ En este repositorio se ira publicando como generar pruebas básicas en Django.
   -   [Datos en model](#datos-model)
 - [World2](#world2)
   - [Vista-Simple](#vista-simple)
+  - [Vista-Clase](#vista-clase)
 - [World3](#world3)
 - [World4](#world4)
 
@@ -56,7 +57,7 @@ Aplicación creada para contener más ejemplos.
 Definición de una vista con argumentos en la URL
 
 ### Vista-Clase
-Definición de una vista basada en clase
+Definición de una vista basada en clase con parámetros en la URL.
 
 ### Vistas-Json
 Definición de una vista utilizando Json en la respuesta.

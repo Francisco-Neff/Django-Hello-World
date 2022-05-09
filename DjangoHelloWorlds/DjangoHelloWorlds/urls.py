@@ -41,7 +41,8 @@ urlpatterns = [
 
     #World2
     path('world2',  world2.homepage_world2   ,name='world2' ),
-    path('param/<str:param>',  world2.parametros_url  , name='param'  ),
+    path('param/<str:param>',  world2.parametros_url  , name='param' ),
+    path('class/<str:param>',  world2.param_Template.as_view()  , name='class' ),
 
     path('admin/', admin.site.urls)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
